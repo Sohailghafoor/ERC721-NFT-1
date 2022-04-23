@@ -18,7 +18,7 @@ contract MyNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable,
     constructor() ERC721("MyToken", "MTK") EIP712("MyToken", "1") {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "";
+        return "ipfs://MyNFTBaseURI/";
     }
 
     function pause() public onlyOwner {
